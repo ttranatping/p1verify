@@ -1,0 +1,4 @@
+Renamed pf-authn-api-sdk-1.0.0.55.jar to pf-authn-api-sdk-1.0.0.48.jar to override the jar file which came with the product
+
+
+FATAL [SystemUtil] Halting PingFederate Engine: Multiple copies of the pf-authn-api-sdk file were found. Please remove duplicates, keeping only the latest version, and placing it in the server/default/lib directory. Files found: server/default/lib/pf-authn-api-sdk-1.0.0.48.jar, server/default/lib/pf-authn-api-sdk-1.0.0.51.jar

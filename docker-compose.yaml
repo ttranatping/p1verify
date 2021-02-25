@@ -1,0 +1,36 @@
+version: "2.4"
+# This server profile used as basis for ping-devop docker-launch
+
+#-------------------------------------------------------------------------------------
+#- Ping Identity PingFederate getting started demo
+#-
+#-                +---------------+
+#-                | PingFederate  |
+#-                +---------------+
+#-
+#- To access PingFederate Console
+#-
+#-    https://localhost:9999/pingfederate/app
+#-
+#-    Username: administrator
+#-    Password: 2FederateM0re
+#-------------------------------------------------------------------------------------
+
+services:
+  pingfederatep1mfa:
+    image: ${PING_IDENTITY_DEVOPS_REGISTRY}/pingfederate:${PING_IDENTITY_DEVOPS_TAG}
+    env_file:
+      - ${HOME}/.pingidentity/devops
+      - override.env
+      - pf.env
+    ports:
+      - "9031:9031"
+      - "9999:9999"
+    networks:
+      - pingnet
+
+networks:
+  pingnet:
+
+volumes:
+  pingfederate-out:

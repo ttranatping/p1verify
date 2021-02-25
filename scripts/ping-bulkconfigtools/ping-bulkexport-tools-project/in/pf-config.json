@@ -1,0 +1,198 @@
+{
+  "config-aliases":[
+        {
+          "config-names":[
+            "administrativeAccounts_items_Administrator_password"
+          ],
+          "replace-name": "PING_IDENTITY_PASSWORD",
+          "is-apply-envfile": false
+        },
+        {
+          "config-names":[
+            "dataStores_items_Other_453F4252F7FBCF731978D757DA83F97115E4B53D_configuration_fields_Client_Secret_value"
+          ],
+          "replace-name": "P14C_PCV_CLIENTSECRET",
+          "is-apply-envfile": true
+        },
+        {
+          "config-names":[
+            "passwordCredentialValidators_items_simplePCV_configuration_tables_rows_fields_Password_value",
+            "passwordCredentialValidators_items_simplePCV_configuration_tables_rows_fields_Confirm_Password_value"
+          ],
+          "replace-name": "SIMPLEPCV_PASSWORD_ttran",
+          "is-apply-envfile": true
+        },
+        {
+          "config-names":[
+            "idp_adapters_items_p14cMFAAdapter_configuration_fields_Application_Client_Secret_value"
+          ],
+          "replace-name": "P14C_PCV_CLIENTSECRET",
+          "is-apply-envfile": true
+        },
+        {
+          "config-names":[
+            "pingOneConnections_items_3ivHaJBGPUjizQ6sJ61i2I_3ivHaJBGPUjizQ6sJ61i2I_credential"
+          ],
+          "replace-name": "P14C_RISK_CREDENTIAL",
+          "is-apply-envfile": true
+        },
+        {
+          "config-names":[
+            "pingOneConnections_items_4ivHaJBGPUjizQ6sJ61i2I_4ivHaJBGPUjizQ6sJ61i2I_credential"
+          ],
+          "replace-name": "P14C_MFA_CREDENTIAL",
+          "is-apply-envfile": true
+        }
+
+  ],
+  "search-replace":[
+    {
+      "search": "568de849-b18f-45bc-8913-8defbc63c84c",
+      "replace": "${P14C_PCV_ENVIRONMENT}",
+      "apply-env-file": true
+    },
+    {
+      "search": "trial_ping_identity_685683413",
+      "replace": "${P14C_PCV_ORGANIZATIONNAME}",
+      "apply-env-file": true
+    },
+    {
+      "search": "1803bba5-2310-4e70-bd65-509bf8c6cf76",
+      "replace": "${P14C_PCV_CREDENTIALID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "North America",
+      "replace": "${P14C_PCV_REGION}",
+      "apply-env-file": true
+    },
+    {
+      "search": "d156a8d3-8503-4c90-a836-89e0197f672f",
+      "replace": "${P14C_MFA_CONNECTIONID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "7a88c565-8c33-4e20-bab2-4fe673500a1f",
+      "replace": "${P14C_MFA_POPULATION}",
+      "apply-env-file": true
+    },
+    {
+      "search": "589e1861-4f53-48d0-afe0-143b0432980e",
+      "replace": "${P14C_RISK_ENVIRONMENT}",
+      "apply-env-file": true
+    },
+    {
+      "search": "76897124-bbe8-4de0-a73b-f5bfa69a1c32",
+      "replace": "${P14C_MFA_APPLICATIONID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "47c21c44-12ae-412f-b387-a9a8a8683453",
+      "replace": "${P14C_PCV_CLIENTID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "47c21c44-12ae-412f-b387-a9a8a8683453",
+      "replace": "${P14C_PCV_CLIENTID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "https://api.pingone.com",
+      "replace": "${P14C_PCV_APISERVICE}",
+      "apply-env-file": true
+    },
+    {
+      "search": "https://auth.pingone.com",
+      "replace": "${P14C_PCV_AUTHSERVICE}",
+      "apply-env-file": true
+    },
+    {
+      "search": "589e1861-4f53-48d0-afe0-143b0432980e",
+      "replace": "${P14C_RISK_ENVIRONMENT}",
+      "apply-env-file": true
+    },
+    {
+      "search": "ffc29e4d-1377-4b0e-b3f3-598f4c013117",
+      "replace": "${P14C_RISK_POLICYID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "20e43ab9-c1d5-4e1a-8fcb-b5bfbad0f144",
+      "replace": "${P14C_RISK_CONNECTIONID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "internal_sinaferdosi_1834281692",
+      "replace": "${P14C_RISK_ORGANIZATIONNAME}",
+      "apply-env-file": true
+    },
+    {
+      "search": "3c76a85e-abcb-4b32-b9d9-ff569fd51eeb",
+      "replace": "${P14C_RISK_CREDENTIALID}",
+      "apply-env-file": true
+    },
+    {
+      "search": "063dbfde-9f0c-4dfa-8e4a-6feead37c77d",
+      "replace": "${P14C_RISK_POPULATIONID}",
+      "apply-env-file": true
+    }
+  ],
+  "remove-config":[
+  ],
+  "expose-parameters":[
+    {
+      "parameter-name": "fileData",
+      "unique-identifiers": [
+          "id"
+      ]
+    },
+    {
+      "parameter-name": "encryptedValue",
+      "replace-name": "value",
+      "unique-identifiers": [
+          "name"
+      ]
+    },
+    {
+      "parameter-name": "encryptedPassword",
+      "replace-name": "password",
+      "unique-identifiers": [
+          "id",
+          "username"
+      ]
+    },
+    {
+      "parameter-name": "encryptedKeyData",
+      "replace-name": "keyData",
+      "unique-identifiers": [
+          "id"
+      ]
+    },
+    {
+      "parameter-name": "encryptedSecret",
+      "replace-name": "secret",
+      "unique-identifiers": [
+          "clientId"
+      ]
+    },
+    {
+      "parameter-name": "encryptedCredential",
+      "replace-name": "credential",
+      "unique-identifiers": [
+          "id"
+      ]
+    },
+    {
+      "parameter-name": "value",
+      "unique-identifiers": [
+          "name=PingID Properties"
+      ]
+    },
+    {
+      "parameter-name": "value",
+      "unique-identifiers": [
+          "name=PingID SDK Properties"
+      ]
+    }
+  ]
+}
