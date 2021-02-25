@@ -538,7 +538,29 @@
                                         "value": "true"
                                     }
                                 ]
-                            }]
+                            },
+{
+                                "defaultRow": false,
+                                "fields": [
+                                    {
+                                        "name": "Username",
+                                        "value": "andrewlatham@pingidentity.com"
+                                    },
+                                    {
+                                        "name": "Password",
+                                        "value": "${SIMPLEPCV_PASSWORD_ttran}"
+                                    },
+                                    {
+                                        "name": "Confirm Password",
+                                        "value": "${SIMPLEPCV_PASSWORD_ttran}"
+                                    },
+                                    {
+                                        "name": "Relax Password Requirements",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+]
                         }],
                         "fields": []
                     },
